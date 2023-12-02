@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .col-4{
+        width:102px;
+    }
+</style>
+<body>
+    <!-- <div class="calc-body" style="width: 30%; margin: auto;">
+        <form action="">
+            <div class="col-12" style="width: 100%;">
+                <input type="text" id="result"  value="">
+            </div>
+            <div class="col-11" style="width: 100%;">
+                <div class="row" style="display: flex ;width:100%; flex-wrap: wrap;">
+                    <input class="col-4" value="9" type="button" id="9">
+                    <input class="col-4" value="8" type="button" id="8">
+                    <input class="col-4" value="7" type="button" id="7">
+                    <input class="col-4" value="6" type="button" id="6">
+                    <input class="col-4" value="5" type="button" id="5">
+                    <input class="col-4" value="4" type="button" id="4">
+                    <input class="col-4" value="3" type="button" id="3">
+                    <input class="col-4" value="2" type="button" id="2">
+                    <input class="col-4" value="1" type="button" id="1">
+                    <input class="col-4" value="0" type="button" id="0">
+                </div>
+            </div>
+            <div class="oprateors">
+                <input type="button" data-action="add" value="+" id="add">
+                <input type="button" data-action="subtract" value="-" id="minus">
+                <input type="button" data-action="multiply" value="*" id="multiblay">
+                <input type="button" data-action="divide" value="/" id="devision">
+            </div>
+            <input type="button" value="=" data-action="calculate" id="calc">
+        </form>
+    </div>
+ -->
+
+
+
+
+
+
+
+
+
+    <!-- <div class= "formstyle">
+        <form name = "form1">
+        <input class= "textview" name = "textview">
+        </form>
+        <center>
+        <table >
+        <tr> 
+           <td> <input class = "btn" type = "button" value = "C" onclick = "form1.textview.value = ' ' " > </td>
+           <td> <input  class = "btn" type = "button" value = "B" onclick = "backspace()" > </td>
+           <td> <input  class = "btn" type = "button" value = "/" onclick = "insert('/')" > </td>
+           <td> <input class = "btn" type = "button" value = "x" onclick = "insert('*')" > </td>
+           </tr>
+           
+            <tr> 
+           <td> <input class = "btn" type = "button" value = "7" onclick = "insert(7)" > </td>
+           <td> <input class = "btn" type = "button" value = "8" onclick = "insert(8)" > </td>
+           <td> <input class = "btn" type = "button" value = "9" onclick = "insert(9)" > </td>
+           <td> <input class = "btn" type = "button" value = "-" onclick = "insert('-')" > </td>
+           </tr>
+           
+            <tr> 
+           <td> <input class = "btn" type = "button" value = "4" onclick = "insert(4)" > </td>
+           <td> <input class = "btn" type = "button" value = "5" onclick = "insert(5)" > </td>
+           <td> <input class = "btn" type = "button" value = "6" onclick = "insert(6)" > </td>
+           <td> <input class = "btn" type = "button" value = "+" onclick = "insert('+')" > </td>
+           </tr>
+           
+            <tr> 
+           <td> <input class = "btn" type = "button" value = "1" onclick = "insert(1)" > </td>
+           <td> <input class = "btn" type = "button" value = "2" onclick = "insert(2)" > </td>
+           <td> <input class = "btn" type = "button" value = "3" onclick = "insert(3)" > </td>
+           <td rowspan = 5> <input class = "btn" style = "height: 110px" type = "button" value = "=" onclick = "equal()"> </td>
+           </tr>
+           <tr>
+           <td colspan = 2> <input class = "btn" style = "width: 106px" type = "button" value = "0" onclick = "insert(0)" > </td>
+           <td> <input class = "btn" type = "button" value = "." onclick = "insert('.')"> </td>
+           </tr>
+           </table>
+           </center>
+        </div>   -->
+    
+    
+
+        <table class="calculator" >
+            <tr>
+              <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+           
+              <!-- clearScreen() function clears all the values -->
+              <td> <input type="button" value="C" onclick="clearScreen()" id="btn" /> </td>
+            </tr>
+            <tr>
+              <!-- display() function displays the value of clicked button -->
+              <td> <input type="button" value="1" onclick="display('1')" /> </td>
+              <td> <input type="button" value="2" onclick="display('2')" /> </td>
+              <td> <input type="button" value="3" onclick="display('3')" /> </td>
+              <td> <input type="button" value="/" onclick="display('/')" /> </td>
+            </tr>
+            <tr>
+              <td> <input type="button" value="4" onclick="display('4')" /> </td>
+              <td> <input type="button" value="5" onclick="display('5')" /> </td>
+              <td> <input type="button" value="6" onclick="display('6')" /> </td>
+              <td> <input type="button" value="-" onclick="display('-')" /> </td>
+            </tr>
+            <tr>
+              <td> <input type="button" value="7" onclick="display('7')" /> </td>
+              <td> <input type="button" value="8" onclick="display('8')" /> </td>
+              <td> <input type="button" value="9" onclick="display('9')" /> </td>
+              <td> <input type="button" value="+" onclick="display('+')" /> </td>
+            </tr>
+            <tr>
+              <td> <input type="button" value="." onclick="display('.')" /> </td>
+              <td> <input type="button" value="0" onclick="display('0')" /> </td>
+           
+              <!-- calculate() function evaluates the mathematical expression -->
+              <td> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>
+              <td> <input type="button" value="*" onclick="display('*')" /> </td>
+            </tr>
+          </table>
+        <script src="main.js"></script>
+</body>
+
+</html>
